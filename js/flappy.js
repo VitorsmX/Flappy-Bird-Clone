@@ -88,7 +88,17 @@ function Passaro(alturaJogo) {
     this.setY = y => this.elemento.style.bottom = `${y}px`
 
     window.onkeydown = e => voando = true
+
+    
     window.onkeyup = e => voando = false
+    
+    document.querySelector('[wm-flappy]').addEventListener('touchstart', function(e){
+        voando = true
+    }, false)
+
+    document.querySelector('[wm-flappy]').addEventListener('touchend', function(e){
+        voando = false
+    }, false)
 
     this.animar = () => {
         const novoY = this.getY() + (voando ? 8 : -6)

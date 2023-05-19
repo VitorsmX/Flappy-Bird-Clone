@@ -17,6 +17,14 @@
     overflow: hidden;
 }
 
+@media(max-height: 600px) {
+    [wm-flappy] {
+        position: absolute;
+        height: 450px;
+        width: 700px;
+    }
+}
+
 .passaro {
     position: absolute;
     width: 60px;
